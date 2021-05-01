@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Позиционирование</title>
+    <style>
+        body {
+            height: 10000px;
+        }
+        .info {
+            width: 150px;
+            border: 1px solid #0f0;
+            padding: 10px;
+            padding-bottom: 20px;
+            position: fixed;
+            right: 25px;
+            top: 25px;
+        }
+        .my_button{
+            border: 0px;
+            background: #0f0;
+            color: #fff;
+            position: absolute;
+            right: -5px;
+            bottom: -5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        Для того, чтобы пользоваться сайтом, Вам нужно разрешить использование cookies.
+        <button class="my_button">Разрешаю</button>
+    </div>
+</body>
+</html>
