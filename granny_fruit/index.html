@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Бабуленькин урожай</title>
+    <style>
+
+        .c_k {
+            margin: 100px auto;
+            width: 900px;
+            height: 210px;
+        }
+
+        .gallery, .gallery1, .gallery2{
+            margin: 10px auto;
+            width: 900px;
+            height: 200px;
+            display: none;
+
+        }
+
+        .fruit{
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+            flex: left;
+            margin: 10px;
+
+        }
+
+        .text{
+            display: none;
+        }
+        .modal{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.9;
+            background: #808080
+        }
+
+        .close{
+            position: fixed;
+            top: 5px;
+            right: 5px;
+            border: 1px solid #000;
+        }
+
+
+        .fruit:hover .text{
+            display: block;
+
+        }
+        .fruit:hover {
+            outline: 2px solid #000;
+            outline-offset: 10px;
+        }
+
+        .photo img{
+            width: 200px;
+            height: 100px;
+        }
+
+        .photo:active .modal{
+            display: block
+        }
+        .modal:hover{
+            display: block;
+        }
+
+        .modal:hover img{
+        opacity: 0.9;
+            width: 50%;
+            height: 50%;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #808080
+            opacity: 0.9;
+        }
+
+        .photo:active .modal img{
+        opacity: 0.9;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #808080
+            opacity: 1;
+        }
+
+
+        #first:checked ~ .gallery{display: block;}
+        #second:checked ~ .gallery1{display: block;}
+        #third:checked ~ .gallery2{display: block;}
+
+
+
+    </style>
+</head>
+<body>
+<div class="c_k">
+    <input id="first" type="radio" name="st"checked>
+    <input id="second" type="radio" name="st">
+    <input id="third" type="radio" name="st">
+
+
+    <div class="gallery">
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://topsov.com/wp-content/uploads/2021/03/d2354d79f31a12525805c44a4381c62d.jpg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://topsov.com/wp-content/uploads/2021/03/d2354d79f31a12525805c44a4381c62d.jpg">
+                </div>
+            </div>
+
+            <div class="text">
+                Морковь – полезный некалорийный овощ, который содержит большое количество витаминов и минералов, необходимых организму для нормального функционирования.
+            </div>
+        </div>
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://intertest.su/images/article/5b323c12da605.jpg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://intertest.su/images/article/5b323c12da605.jpg">
+                </div>
+            </div>
+            <div class="text">
+                Картофель - одна из важнейших продовольственных, кормовых, технических пропашных сельскохозяйственных культур. По классификации, принятой в растениеводстве, картофель относят к крахмалоносным культурам, ранее — к клубнеплодам.
+            </div>
+        </div>
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://fruits71.ru/upload/iblock/430/4300a6d0654790022695b7494d24d667.jpg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://fruits71.ru/upload/iblock/430/4300a6d0654790022695b7494d24d667.jpg">
+                </div>
+            </div>
+            <div class="text">
+               Вид многолетних травянистых растений рода Паслён. Возделывается как однолетнее растение. Съедобен только плод. В ботаническом смысле это ягода, в кулинарном смысле рассматривается как овощ. Родина - субтропики Азии.
+            </div>
+        </div>
+        <div class="fruit">
+            <div class="photo">
+                <img src="http://stylishgarden.ru/wp-content/uploads/2015/01/pumpkins-469641_1280.jpg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="http://stylishgarden.ru/wp-content/uploads/2015/01/pumpkins-469641_1280.jpg">
+                </div>
+            </div>
+            <div class="text">
+                Род травянистых растений семейства Тыквенные. Под словом «тыква» в России обычно понимаются виды Тыква обыкновенная и Тыква гигантская, широко распространённые и культивируемые как пищевое и кормовое растение.
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery1">
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://fermoved.ru/wp-content/uploads/2017/12/gollandskie-sorta-opisanie.jpg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://fermoved.ru/wp-content/uploads/2017/12/gollandskie-sorta-opisanie.jpg">
+                </div>
+            </div>
+
+            <div class="text">
+                Огурец (от лат. Cucumis sativus) – однолетнее теплолюбивое растение семейства тыквенных. Плоды «родственника» тыквы чаще всего вытянутой формы, в среднем имеют длину около 5–10 см, но встречаются и «особи» размером около метра! Огурец – растение «капризное»
+            </div>
+        </div>
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://eda-land.ru/images/article/orig/2018/10/kalorijnost-i-sostav-raznyh-vidov-perca-11.jpg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://eda-land.ru/images/article/orig/2018/10/kalorijnost-i-sostav-raznyh-vidov-perca-11.jpg">
+                </div>
+            </div>
+            <div class="text">
+               Плод однолетних травянистых растений семейства пасленовых. Плоды сладкого перца - ложные пустотелые ягоды, многосемянные, красные, оранжевые, желтые или коричневые, разнообразной формы и величины   </div>
+            </div>
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://get.pxhere.com/photo/natural-foods-strawberry-strawberries-food-fruit-frutti-di-bosco-berry-plant-accessory-fruit-Superfruit-superfood-produce-seedless-fruit-sweetness-local-food-fruit-preserve-cuisine-ingredient-1611183.jpg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://get.pxhere.com/photo/natural-foods-strawberry-strawberries-food-fruit-frutti-di-bosco-berry-plant-accessory-fruit-Superfruit-superfood-produce-seedless-fruit-sweetness-local-food-fruit-preserve-cuisine-ingredient-1611183.jpg">
+                </div>
+            </div>
+            <div class="text">
+                Клубни́ка (от др.-рус. клуб «клубок, шарообразное тело») — название некоторых видов растений рода Земляника (Fragaria) или их плодов, и распространённое разговорное название крупноплодных сортов этого рода; также — топоним.
+            </div>
+        </div>
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://avatars.mds.yandex.net/get-zen_doc/2436983/pub_60440ac2b8613c1dbba47431_60440ace44edc66681f553d1/scale_1200">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://avatars.mds.yandex.net/get-zen_doc/2436983/pub_60440ac2b8613c1dbba47431_60440ace44edc66681f553d1/scale_1200">
+                </div>
+            </div>
+            <div class="text">
+                Двулетнее растение, сельскохозяйственная культура; вид рода Капуста семейства Капустные (Крестоцветные). Русское слово "капуста" происходит от древнекельтского "кап" - голова.
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery2">
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://i.pinimg.com/originals/61/49/3c/61493cd722530c41aa7bd4c00a54e157.jpg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://i.pinimg.com/originals/61/49/3c/61493cd722530c41aa7bd4c00a54e157.jpg">
+                </div>
+            </div>
+
+            <div class="text">
+                Однолетнее травянистое растение, вид рода Арбуз семейства Тыквенные. В зависимости от сорта может быть столового или кормового назначения. В качестве кормового также используется арбуз кормовой.
+            </div>
+        </div>
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://turboteka.ru/wp-content/uploads/2017/03/fruit18.jpg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://turboteka.ru/wp-content/uploads/2017/03/fruit18.jpg">
+                </div>
+            </div>
+            <div class="text">
+                Кустовая разновидность тыквы обыкновенной с продолговатыми плодами, без плетей. Плоды могут быть зелёного, жёлтого, чёрного или белого цвета. Мякоть нежная и быстроваркая.
+            </div>
+        </div>
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://otvet.imgsmail.ru/download/222718173_be2860da2e9b3bcf8cb7615fe65970be_800.jpg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://otvet.imgsmail.ru/download/222718173_be2860da2e9b3bcf8cb7615fe65970be_800.jpg">
+                </div>
+            </div>
+            <div class="text">
+                Томат, либо помидор (Solanum lycopersicum) ― это вид травянистых однолетних и многолетних растений, который относится к роду Паслен семейства Пасленовые.
+            </div>
+        </div>
+        <div class="fruit">
+            <div class="photo">
+                <img src="https://r.mt.ru/r19/photo46F6/20907554912-0/jpeg/bp.jpeg">
+                <div class="modal">
+                    <a href=""><div class="close">X</div></a>
+                    <img src="https://r.mt.ru/r19/photo46F6/20907554912-0/jpeg/bp.jpeg">
+                </div>
+            </div>
+            <div class="text">
+                Многолетнее травянистое растение, вид рода Лук семейства Луковые, широко распространённая овощная культура.
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+</body>
+</html>
