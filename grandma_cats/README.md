@@ -48,5 +48,7 @@
 ⚠️  Задание необходимо решить без использования JS и с использованием Grid.
 
 Если гибкие коробки вам по плечу, то вы наверняка сможете реализовать все при помощи CSS3 Grid, о которых мы также рассказывали в этой лекции.
+
 ![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/BYhyQ1t8EeeP6hLXsz0H0g_f055dc1f0500f39e867fd5a4588a3c0f_da00ff4a-896a-11e5-9e83-bf94f0429635.jpg?expiry=1620259200000&hmac=_tcghjGaEBrPpPAYdMgRTl4iVxzTpqL8LvRjSbyJL-o)
+
 ⚠️  При написании этого задания ни один котик не остался без молочка.

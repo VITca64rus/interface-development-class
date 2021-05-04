@@ -3,8 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-rows: 1fr 1fr 3fr;
+        }
+
+        .header {
+            grid-area: 1 / 1 / 2 / 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .left {
+            grid-area: 2 / 1 / 4 / 2;
+            display: grid;
+            grid-template-rows: 40px 40px 40px;
+            background: gray;
+        }
+        .gallery{
+            grid-area: 2 / 2 / 4 / 3;
+            height: 600px;пше
+        }
+        .right{
+            grid-area: 2 / 3 / 3 / 4;
+            background: gray;
+        }
+        .class_cat{
+            border-bottom: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">Бабуленькины котятки</div>
+        <div class="left">
+
+                <div class="class_cat">1 порода</div>
+                <div class="class_cat">2 порода</div>
+                <div class="class_cat">3 порода</div>
+
+        </div>
+        <div class="gallery">
+            Тут фотки
+        </div>
+        <div class="right">
+            <div>Рейтинг</div>
+            <div>Рейтинг</div>
+        </div>
+    </div>
 
 </body>
 </html>
