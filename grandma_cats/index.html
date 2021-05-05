@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        body {
+            background: #DCDCDC;
+        }
         .container{
             display: grid;
             grid-template-columns: 1fr 4fr 1fr;
-            grid-template-rows: 1fr 1fr 3fr;
+            grid-template-rows: auto 1fr 1fr;
         }
 
         .header {
@@ -18,43 +21,383 @@
         }
         .left {
             grid-area: 2 / 1 / 4 / 2;
-            display: grid;
-            grid-template-rows: 40px 40px 40px;
-            background: gray;
+            background: #C0C0C0;
+            margin-right: 15px;
         }
         .gallery{
             grid-area: 2 / 2 / 4 / 3;
-            height: 600px;пше
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-gap: 15px;
         }
         .right{
             grid-area: 2 / 3 / 3 / 4;
-            background: gray;
+            background: #C0C0C0;
+            grid-template-rows: 40px 40px 40px 40px 40px;
+            padding: 10px 20px 10px 10px;
+            margin-left: 15px;
+            font-size: 12px;
+            text-align: right;
+
         }
-        .class_cat{
-            border-bottom: 1px solid #000;
+        .sorted {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+
+
+        .class_rate{
+            display: grid;
+            grid-template-columns: 9fr 1fr;
+            margin: 7px 0px 10px 0px;
+        }
+        .rate{
+            color: red;
+            font-family: "Lucida Console";
+            font-size: 20px;
+            text-align: left;
+        }
+        .line_rate_10{
+            height: 15px;
+            width: 100%;
+            border: 1px solid #000;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: linear-gradient(to right, #0f0, #fff);
         }
+        .line_rate_9{
+            height: 15px;
+            width: 90%;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #0f0, #fff);
+        }
+        .line_rate_8{
+            height: 15px;
+            width: 80%;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #FFFF00, #fff);
+        }
+        .line_rate_4{
+            height: 15px;
+            width: 40%;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #F00, #fff);
+        }
+        .n_rate{
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+
+        img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .img1{
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        .img2{
+            grid-area: 1 / 2 / 2 / 4;
+        }
+        .img6{
+            grid-area: 3 / 1 / 4 / 3;
+        }
+        .img8{
+            grid-area: 4 / 1 / 5 / 4;
+        }
+
+        .sort_rate{
+            display:none;
+            font-size: 16px;
+            text-align: left;
+        }
+        .not_sort_rate{
+            font-size: 16px;
+            text-align: left;
+        }
+        #first:checked ~ .not_sort_rate{
+            display: none;
+        }
+        #first:checked ~ .sort_rate{
+            display: block;
+        }
+        .img1{position: relative;}
+        .img2{position: relative;}
+        .img3{position: relative;}
+        .img4{position: relative;}
+        .img5{position: relative;}
+        .img6{position: relative;}
+        .img7{position: relative;}
+        .img8{position: relative;}
+
+        .img1:hover span{display: block;}
+        .img2:hover span{display: block;}
+        .img3:hover span{display: block;}
+        .img4:hover span{display: block;}
+        .img5:hover span{display: block;}
+        .img6:hover span{display: block;}
+        .img7:hover span{display: block;}
+        .img8:hover span{display: block;}
+
+        .img1 span {
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            font-size: 18px;
+            padding: 3px 5px;
+            display: none
+        }
+        .img2 span {
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            font-size: 18px;
+            padding: 3px 5px;
+            display: none
+        }
+        .img3 span {
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            font-size: 18px;
+            padding: 3px 5px;
+            display: none
+        }
+        .img4 span {
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            font-size: 18px;
+            padding: 3px 5px;
+            display: none
+        }
+        .img5 span {
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            font-size: 18px;
+            padding: 3px 5px;
+            display: none
+        }
+        .img6 span {
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            font-size: 18px;
+            padding: 3px 5px;
+            display: none
+        }
+        .img7 span {
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            font-size: 18px;
+            padding: 3px 5px;
+            display: none
+        }
+        .img8 span {
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            font-size: 18px;
+            padding: 3px 5px;
+            display: none
+        }
+        button {
+            background: #C0C0C0;
+            border: none;
+        }
+
+        .but_abis:focus {background: #808080;}
+        .but_abis:focus ~ .gallery .brit{opacity: 0.3;}
+        .but_abis:focus ~ .gallery .siam{opacity: 0.3;}
+        .but_abis:focus ~ .gallery .rus{opacity: 0.3;}
+
+        .but_brit:focus {background: #808080;}
+        .but_brit:focus ~ .gallery .abis{opacity: 0.3;}
+        .but_brit:focus ~ .gallery .siam{opacity: 0.3;}
+        .but_brit:focus ~ .gallery .rus{opacity: 0.3;}
+
+        .but_rus:focus {background: #808080;}
+        .but_rus:focus ~ .gallery .abis{opacity: 0.3;}
+        .but_rus:focus ~ .gallery .siam{opacity: 0.3;}
+        .but_rus:focus ~ .gallery .brit{opacity: 0.3;}
+
+        .but_siam:focus {background: #808080;}
+        .but_siam:focus ~ .gallery .abis{opacity: 0.3;}
+        .but_siam:focus ~ .gallery .rus{opacity: 0.3;}
+        .but_siam:focus ~ .gallery .brit{opacity: 0.3;}
+
+        .class_cat{
+            display: block;
+            position: absolute; /* Абсолютное позиционирование */
+            width: 15.4%;
+            border-bottom: 1px solid #000;
+            height: 40px;
+            float: left;
+            background: #C0C0C0;
+        }
+        .but_abis{top: 90px;}
+        .but_brit{top: 130px;}
+        .but_rus{top: 170px;}
+        .but_siam{top: 210px;}
+
+
+
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">Бабуленькины котятки</div>
-        <div class="left">
+        <div class="header"><h1>Бабуленькины котятки</h1></div>
+        <div class="left"></div>
 
-                <div class="class_cat">1 порода</div>
-                <div class="class_cat">2 порода</div>
-                <div class="class_cat">3 порода</div>
+            <button class="class_cat but_abis">Абиссинская</button>
+            <button class="class_cat but_brit">Британская</button>
+            <button class="class_cat but_rus">Русская голубая</button>
+            <button class="class_cat but_siam">Сиамская</button>
 
-        </div>
         <div class="gallery">
-            Тут фотки
+
+            <div class="img1">
+                <img class="brit" src="img/brit2.jpg">
+                <span>Гоша, 4 года</span>
+            </div>
+            <div class="img2">
+                <img class="siam" src="img/siam2.jpg">
+                <span>Муся, 3 года</span>
+            </div>
+            <div class="img3">
+                <img class="abis" src="img/abis1.jpeg">
+                <span>Амур, 1.5 года</span>
+            </div>
+            <div class="img4">
+                <img class="brit" src="img/brit1.jpg">
+                <span>Джасти, 2 месяца</span>
+            </div>
+            <div class="img5">
+                <img class="rus" src="img/rus1.jpg">
+                <span>Зорро, 2 года</span>
+            </div>
+            <div class="img6">
+                <img class="siam" src="img/siam1.jpg">
+                <span>Гарфилд, 2.5 года</span>
+            </div>
+            <div class="img7">
+                <img class="abis" src="img/abis2.jpeg">
+                <span>Жерар, 3 года</span>
+            </div>
+            <div class="img8">
+                <img class="brit" src="img/brit3.jpg">
+                <span>Деймон, 4 месяца</span>
+            </div>
         </div>
         <div class="right">
-            <div>Рейтинг</div>
-            <div>Рейтинг</div>
+            <div class="rate">РЕЙТИНГ</div>
+
+            по убыванию
+            <input id="first" type="checkbox">
+            <div class="not_sort_rate">
+                <div>
+                    Абиссинская
+                    <div class="class_rate">
+                        <div class="line_rate_9"></div>
+                        <div class="n_rate">9</div>
+                    </div>
+                </div>
+                <div>
+                    Британская
+                    <div class="class_rate">
+                        <div class="line_rate_8"></div>
+                        <div class="n_rate">8</div>
+                    </div>
+                </div>
+                <div>
+                    Русская голубая
+                    <div class="class_rate">
+                        <div class="line_rate_10"></div>
+                        <div class="n_rate">10</div>
+                    </div>
+                </div>
+                <div>
+                    Сиамская
+                    <div class="class_rate">
+                        <div class="line_rate_4"></div>
+                        <div class="n_rate">4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sort_rate">
+                 <div>
+                    Русская голубая
+                    <div class="class_rate">
+                        <div class="line_rate_10"></div>
+                        <div class="n_rate">10</div>
+                    </div>
+                </div>
+                <div>
+                    Абиссинская
+                    <div class="class_rate">
+                        <div class="line_rate_9"></div>
+                        <div class="n_rate">9</div>
+                    </div>
+                </div>
+                <div>
+                    Британская
+                    <div class="class_rate">
+                        <div class="line_rate_8"></div>
+                        <div class="n_rate">8</div>
+                    </div>
+                </div>
+
+                <div>
+                    Сиамская
+                    <div class="class_rate">
+                        <div class="line_rate_4"></div>
+                        <div class="n_rate">4</div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 
 </body>
