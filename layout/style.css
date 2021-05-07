@@ -26,11 +26,198 @@ body{
 }
 .text_header{
     position: relative;
-
     font-family: Arial;
     font-size: 36px;
+    line-height: auto;
     display: block;
     width: 65.44%;
-    margin: 0 auto;
+    left: 18.5%;
+    top: 22px;
+    text-indent: -18px;
+    line-height: 43px;
+}
+.offroad_cars {
+    position: relative;
+    left: 18%;
+}
+
+.ten{
+    position: relative;
+    width: 59px;
+    height: 59px;
+
+    background: rgb(252, 146, 71);
+    border-radius: 50%;
+    z-index:1;
+}
+.circle{
+    position: relative;
+    width: 59px;
+    height: 59px;
+    background: rgb(255, 219, 74);
+    border-radius: 50%;
+    left: -1px;
+    top: -1px;
+    z-index:0;
+    display: flex;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
 }
+.left{
+    left: 20px;
+}
+.right{
+    left: 22px;
+}
+
+.all_left {
+    display: inline-block;
+    position:relative;
+    left: 7.4%;
+    top: -5px;
+}
+.all_right {
+    display: inline-block;
+    position:relative;
+    left: 80.2%;
+    top: -7px;
+}
+.all_left:hover {
+    opacity: 0.8;
+}
+.all_right:hover {
+    opacity: 0.8;
+}
+
+.video{
+    position: relative;
+    top: 50px;
+    left: 17.4%;
+    width: 640px;
+}
+.name_video_fon{
+    position: relative;
+    background: rgb(41, 54, 60);
+    opacity: 0.7;
+    height: 50px;
+    top: -365px;
+}
+.name_video{
+    position: relative;
+    font-family: Arial;
+    font-size: 29.02px;
+    color: #fff;
+    height: 50px;
+    top: -406px;
+    left: 170px;
+}
+
+.ten_play{
+    position: relative;
+    width: 126px;
+    height: 126px;
+    background: rgb(252, 146, 71);
+    border-radius: 50%;
+}
+.circle_play{
+    position: relative;
+    width: 126px;
+    height: 126px;
+    background: rgb(255, 219, 74);
+    border-radius: 50%;
+    left: -1px;
+    top: -1px;
+    display: flex;
+}
+.all_play{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -341px;
+}
+.play{
+    position: relative;
+    left: 45px;
+}
+.text_header2{
+    font-family: Arial;
+    font-size: 47px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -114px;
+}
+.different {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    margin-top: -75px;
+    margin-left: 43px;
+}
+.img2{
+    margin-top: -3px;
+}
+.img4{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.name_img{
+    font-family: Arial;
+    font-size: 30px;
+    width: 206px;
+    white-space: nowrap; /* Отменяем перенос текста */
+    overflow: hidden; /* Обрезаем содержимое */
+    text-overflow: ellipsis;
+}
+.text_img{
+    font-family: Arial;
+    font-size: 16px;
+    margin-top: 17px;
+    width: 222px;
+}
+.first{
+    margin-left: -3px;
+}
+.second{
+    margin-left: 2px;
+}
+.third{
+    margin-left: 6px;
+}
+.four{
+    margin-left: 12px;
+}
+.last_text{
+    font-family: Arial;
+    font-size: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-left: 41px;
+}
+.button{
+    background: linear-gradient(to top, #ffe34a, #ffdb00);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    font-size: 36px;
+    line-height: 20px;
+    width: 317px;
+    height: 70px;
+    position: relative;
+    margin: 62px auto 18px;
+}
+.button:hover{
+background-image: rgba(255, 255, 255, 0.9);
+
+}
+
