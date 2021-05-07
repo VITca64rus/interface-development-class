@@ -1,0 +1,36 @@
+body{
+    margin:0;
+}
+@media (min-width: 1020px) {
+    .background_color{
+        display: block;
+        width: 984px;
+        background: rgb(246, 245, 243);
+        margin:0 auto;
+
+    }
+}
+@media (max-width: 1020px) {
+    .background_color{
+        width: calc(100%-36px);
+        background: rgb(246, 245, 243);
+        margin:0px 18px 0px 18px;
+
+    }
+}
+
+.logo{
+    position: relative;
+    margin-left: calc(100% - 242px);
+
+}
+.text_header{
+    position: relative;
+
+    font-family: Arial;
+    font-size: 36px;
+    display: block;
+    width: 65.44%;
+    margin: 0 auto;
+
+}
