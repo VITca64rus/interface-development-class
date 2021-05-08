@@ -205,19 +205,38 @@ body{
 .button{
     background: linear-gradient(to top, #ffe34a, #ffdb00);
     border-radius: 10px;
+    width: 317px;
+    height: 70px;
+    position: relative;
+    margin: 62px auto;
+}
+.text_but{
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial;
     font-size: 36px;
     line-height: 20px;
+    position: relative;
+    top: -83px;
+    margin-top: -25px;
+}
+.white_space{
+    background: #fff;
+    opacity: 0.18;
     width: 317px;
     height: 70px;
+    border-radius: 10px;
     position: relative;
-    margin: 62px auto 18px;
+    top: -62px;
+    margin-top: -70px;
+    left: 333px;
+    display: none;
 }
-.button:hover{
-background-image: rgba(255, 255, 255, 0.9);
-
+.all_but:hover .white_space{
+    display: block;
+}
+.all_play:hover{
+    opacity: 0.8;
 }
 
